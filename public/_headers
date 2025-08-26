@@ -1,0 +1,4 @@
+/*
+  Access-Control-Allow-Origin: https://www.pinalysis.com
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: *
