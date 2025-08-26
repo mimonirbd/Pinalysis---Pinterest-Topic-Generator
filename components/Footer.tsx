@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Twitter, Facebook, Linkedin } from 'lucide-react';
 
@@ -20,7 +19,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="border-t border-slate-800/50 bg-black">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-5">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">Pinalysis</h3>
             <p className="max-w-xs text-slate-400">
@@ -33,10 +32,10 @@ const Footer: React.FC = () => {
               <a href="https://www.pinterest.com/Pinalysis/" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">
                 <PinterestIcon className="h-5 w-5" />
               </a>
-              <a href="https://www.pinalysis.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">
+              <a href="https://www.pinalysis.com" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.pinalysis.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">
+              <a href="https://www.pinalysis.com" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -45,28 +44,35 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="mb-4 text-lg font-semibold text-white">PRODUCT</h4>
             <ul className="space-y-3">
-              <li><a href="https://www.pinalysis.com/features" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Features</a></li>
-              <li><a href="https://www.pinalysis.com/pricing" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Pricing</a></li>
-              <li><a href="https://www.pinalysis.com/roadmap" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Roadmap</a></li>
+              <li><a href="https://www.pinalysis.com/features" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Features</a></li>
+              <li><a href="https://www.pinalysis.com/pricing" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Pricing</a></li>
+              <li><a href="https://www.pinalysis.com/roadmap" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Roadmap</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-lg font-semibold text-white">FREE TOOLS</h4>
+            <ul className="space-y-3">
+              <li><a href="https://www.pinalysis.com/ideas-finder" className="text-slate-400 transition-colors hover:text-[#ea384c]">Ideas Finder</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="mb-4 text-lg font-semibold text-white">RESOURCES</h4>
             <ul className="space-y-3">
-              <li><a href="https://www.pinalysis.com/blog" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Blog</a></li>
-              <li><a href="https://www.pinalysis.com/changelog" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Change Log</a></li>
-              <li><a href="https://www.pinalysis.com/knowledge" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Knowledge Base</a></li>
+              <li><a href="https://www.pinalysis.com/blog" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Blog</a></li>
+              <li><a href="https://www.pinalysis.com/changelog" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Change Log</a></li>
+              <li><a href="https://www.pinalysis.com/knowledge" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Knowledge Base</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="mb-4 text-lg font-semibold text-white">COMPANY</h4>
             <ul className="space-y-3">
-              <li><a href="https://www.pinalysis.com/about" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">About</a></li>              
-              <li><a href="https://www.pinalysis.com/contact" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Contact</a></li>
-              <li><a href="https://www.pinalysis.com/privacy" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Privacy</a></li>
-              <li><a href="https://www.pinalysis.com/terms" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Terms</a></li>
+              <li><a href="https://www.pinalysis.com/about" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">About</a></li>              
+              <li><a href="https://www.pinalysis.com/contact" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Contact</a></li>
+              <li><a href="https://www.pinalysis.com/privacy" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Privacy</a></li>
+              <li><a href="https://www.pinalysis.com/terms" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">Terms</a></li>
             </ul>
           </div>
         </div>
