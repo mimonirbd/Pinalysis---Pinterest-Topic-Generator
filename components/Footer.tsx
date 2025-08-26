@@ -54,6 +54,7 @@ const Footer: React.FC = () => {
             <h4 className="mb-4 text-lg font-semibold text-white">FREE TOOLS</h4>
             <ul className="space-y-3">
               <li><a href="https://www.pinalysis.com/ideas-finder" className="text-slate-400 transition-colors hover:text-[#ea384c]">Ideas Finder</a></li>
+              <li><a href="https://www.pinalysis.com/content-categorize" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">Content Categorize</a></li>                          
             </ul>
           </div>
           
