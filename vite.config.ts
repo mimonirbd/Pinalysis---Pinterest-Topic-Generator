@@ -16,7 +16,17 @@ export default defineConfig(({ mode }) => {
         }
       },
       build: {
-        copyPublicDir: true
+        copyPublicDir: true,
+        rollupOptions: {
+          output: {
+            assetFileNames: (assetInfo) => {
+              if (assetInfo.name === 'favicon.png') {
+                return 'images/favicon.png';
+              }
+              return 'assets/[name]-[hash][extname]';
+            },
+          },
+        },
       }
     };
 });
