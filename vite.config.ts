@@ -14,19 +14,6 @@ export default defineConfig(({ mode }) => {
           // Fix: __dirname is not available in ES modules, use import.meta.url instead.
           '@': fileURLToPath(new URL('.', import.meta.url)),
         }
-      },
-      build: {
-        copyPublicDir: true,
-        rollupOptions: {
-          output: {
-            assetFileNames: (assetInfo) => {
-              if (assetInfo.name === 'favicon.png') {
-                return 'images/favicon.png';
-              }
-              return 'assets/[name]-[hash][extname]';
-            },
-          },
-        },
       }
     };
 });
