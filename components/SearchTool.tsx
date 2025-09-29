@@ -127,7 +127,7 @@ const SearchTool: React.FC = () => {
                   <FileSearch2 className="h-16 w-16 text-slate-600" />
                   <h3 className="mt-6 text-xl font-semibold text-white">No Matches Found</h3>
                   <p className="mt-2 text-slate-400">
-                    We couldn't find any topics for that keyword. Try a broader search term!
+                    We couldn't find any topics for that keyword. Try a shorter search term!
                   </p>
                 </div>
               )}
