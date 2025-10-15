@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Facebook, Linkedin } from 'lucide-react';
+import { Twitter, Facebook, Youtube } from 'lucide-react';
 
 const PinterestIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg 
@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
               <a href="https://www.pinterest.com/Pinalysis/" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">
                 <PinterestIcon className="h-5 w-5" />
               </a>
-              <a href="https://www.pinalysis.com" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">
+              <a href="https://www.facebook.com/pinalysis" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.pinalysis.com" target="_blank" rel="noopener" className="text-slate-400 transition-colors hover:text-[#ea384c]">
-                <Linkedin className="h-5 w-5" />
+              <a href="https://www.youtube.com/@pinalysis" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-[#ea384c]">
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
