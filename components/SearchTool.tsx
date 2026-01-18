@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect, useMemo } from 'react';
 import ResultItem from './ResultItem';
+import FloatingActions from './FloatingActions';
 import { Search, FileSearch2 } from 'lucide-react';
 import { topics } from '../data/topics';
 
@@ -159,6 +161,9 @@ const SearchTool: React.FC = () => {
           </div>
         )}
       </div>
+      
+      {/* Floating Actions for current page items */}
+      <FloatingActions items={currentItems} />
     </section>
   );
 };
