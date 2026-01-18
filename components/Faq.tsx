@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -5,6 +6,10 @@ const faqs = [
     {
         question: 'Is this Pinterest topic generator really free?',
         answer: 'Yes, this tool is 100% free to use. There are no hidden charges, and you can perform as many searches as you need. It\'s our contribution to the creator community from Pinalysis.com.',
+    },
+    {
+        question: 'How do I use the quick actions and copy features?',
+        answer: 'We\'ve added several power features! You can click directly on any topic name to instantly copy it to your clipboard. Use the Search icon to analyze that topic on Pinalysis, or the External Link icon to view it on Pinterest. Plus, the floating buttons in the bottom right corner allow you to copy all visible topic names or links at once.',
     },
     {
         question: 'How are the topics sourced?',

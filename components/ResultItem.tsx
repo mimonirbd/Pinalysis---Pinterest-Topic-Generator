@@ -29,7 +29,7 @@ const ResultItem: React.FC<ResultItemProps> = ({ topic }) => {
     >
       <button
         onClick={handleCopyClick}
-        className="flex-grow mr-4 text-left font-medium text-gray-50 capitalize hover:text-[#ea384c] transition-colors truncate focus:outline-none group/text"
+        className="flex-grow mr-4 text-left font-medium text-gray-50 capitalize hover:text-[#ea384c] transition-colors focus:outline-none group/text whitespace-normal break-words"
         aria-label={`Copy ${topic} to clipboard`}
         title="Click to copy"
       >
@@ -39,7 +39,7 @@ const ResultItem: React.FC<ResultItemProps> = ({ topic }) => {
         </span>
       </button>
       
-      <div className="flex items-center space-x-2 shrink-0">
+      <div className="flex items-center space-x-2 shrink-0 self-start mt-0.5">
         {/* Pinalysis Search Button */}
         <a
           href={pinalysisUrl}

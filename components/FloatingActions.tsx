@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Copy, Link as LinkIcon, Check } from 'lucide-react';
+import { useToast } from './ToastContext';
 
 interface FloatingActionsProps {
   items: string[];
@@ -9,6 +10,7 @@ interface FloatingActionsProps {
 const FloatingActions: React.FC<FloatingActionsProps> = ({ items }) => {
   const [copiedNames, setCopiedNames] = useState(false);
   const [copiedLinks, setCopiedLinks] = useState(false);
+  const { showToast } = useToast();
 
   const handleCopyNames = async () => {
     if (items.length === 0) return;
@@ -16,6 +18,7 @@ const FloatingActions: React.FC<FloatingActionsProps> = ({ items }) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopiedNames(true);
+      showToast(`Copied ${items.length} topic names to clipboard!`);
       setTimeout(() => setCopiedNames(false), 2000);
     } catch (err) {
       console.error('Failed to copy names', err);
@@ -30,6 +33,7 @@ const FloatingActions: React.FC<FloatingActionsProps> = ({ items }) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopiedLinks(true);
+      showToast(`Copied ${items.length} links to clipboard!`);
       setTimeout(() => setCopiedLinks(false), 2000);
     } catch (err) {
       console.error('Failed to copy links', err);
@@ -40,19 +44,7 @@ const FloatingActions: React.FC<FloatingActionsProps> = ({ items }) => {
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-40 flex flex-col gap-3 print:hidden">
-      {/* Copy Links Button */}
-      <button
-        onClick={handleCopyLinks}
-        className="group relative flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-slate-900 border border-slate-700 text-slate-300 shadow-xl transition-all hover:bg-slate-800 hover:text-white hover:border-[#ea384c] focus:outline-none focus:ring-2 focus:ring-[#ea384c] focus:ring-offset-2 focus:ring-offset-black"
-        aria-label="Copy all links on current page"
-      >
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-slate-900 px-2 py-1 text-xs font-medium text-white opacity-0 shadow-sm transition-opacity group-hover:opacity-100 border border-slate-800 pointer-events-none hidden sm:block">
-          Copy Page Links
-        </span>
-        {copiedLinks ? <Check className="h-5 w-5 text-green-500" /> : <LinkIcon className="h-5 w-5" />}
-      </button>
-
-      {/* Copy Names Button */}
+      {/* Copy Names Button (Now First) */}
       <button
         onClick={handleCopyNames}
         className="group relative flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-slate-900 border border-slate-700 text-slate-300 shadow-xl transition-all hover:bg-slate-800 hover:text-white hover:border-[#ea384c] focus:outline-none focus:ring-2 focus:ring-[#ea384c] focus:ring-offset-2 focus:ring-offset-black"
@@ -62,6 +54,18 @@ const FloatingActions: React.FC<FloatingActionsProps> = ({ items }) => {
           Copy Page Names
         </span>
         {copiedNames ? <Check className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
+      </button>
+
+      {/* Copy Links Button (Now Second) */}
+      <button
+        onClick={handleCopyLinks}
+        className="group relative flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-slate-900 border border-slate-700 text-slate-300 shadow-xl transition-all hover:bg-slate-800 hover:text-white hover:border-[#ea384c] focus:outline-none focus:ring-2 focus:ring-[#ea384c] focus:ring-offset-2 focus:ring-offset-black"
+        aria-label="Copy all links on current page"
+      >
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-slate-900 px-2 py-1 text-xs font-medium text-white opacity-0 shadow-sm transition-opacity group-hover:opacity-100 border border-slate-800 pointer-events-none hidden sm:block">
+          Copy Page Links
+        </span>
+        {copiedLinks ? <Check className="h-5 w-5 text-green-500" /> : <LinkIcon className="h-5 w-5" />}
       </button>
     </div>
   );
