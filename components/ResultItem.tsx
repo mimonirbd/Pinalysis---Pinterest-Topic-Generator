@@ -11,8 +11,8 @@ const ResultItem: React.FC<ResultItemProps> = ({ topic }) => {
   const { showToast } = useToast();
   const topicSlug = topic.toLowerCase().replace(/\s+/g, '-');
   const pinterestUrl = `https://www.pinterest.com/topics/${topicSlug}`;
-  // Construct Pinalysis search URL with the topic encoded (spaces become %20)
-  const pinalysisUrl = `https://www.pinalysis.com/top-pins?q=${encodeURIComponent(topic)}`;
+  // Construct Pinalysis search URL with the topic encoded (spaces become +) and anchor appended
+  const pinalysisUrl = `https://www.pinalysis.com/keyword-explorer?q=${encodeURIComponent(topic).replace(/%20/g, '+')}#suggestions`;
 
   const handleCopyClick = async () => {
     try {
