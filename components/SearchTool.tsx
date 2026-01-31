@@ -84,7 +84,7 @@ const SearchTool: React.FC = () => {
           </span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400">
-          Get endless Pinterest topic ideas in a snap. Just type a keyword to find popular topics and the right tags to get your content noticed. It's the simple way to find your next content idea.
+          Get endless Pinterest topic (Interests) ideas in a snap. Just type a keyword to find popular topics and the right tags to get your content noticed. It's the simple way to find your next content idea.
         </p>
 
         <div className="relative mx-auto mt-12 max-w-2xl">
